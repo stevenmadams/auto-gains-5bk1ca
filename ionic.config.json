@@ -1,6 +1,8 @@
 {
   "name": "AutoGains",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "0c97dcb1"
 }

@@ -1,0 +1,20 @@
+<!-- program-list.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Programs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="createNewProgram()">Create New Program</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let program of programs" (click)="goToProgramDetails(program.id)">
+      <ion-label>
+        <h2>{{ program.name }}</h2>
+        <p>Weeks: {{ program.weeks }} | Deload: {{ program.hasDeloadWeek }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

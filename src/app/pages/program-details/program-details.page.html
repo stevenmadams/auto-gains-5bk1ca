@@ -1,0 +1,28 @@
+<!-- program-details.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ program?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="program">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Program Info</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Weeks: {{ program.weeks }}</p>
+      <p>Deload: {{ program.hasDeloadWeek }}</p>
+      <p>Deload Adjustment: {{ program.deloadAdjustment }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="addWorkout()">Add Workout</ion-button>
+  <ion-list>
+    <ion-item *ngFor="let workout of program.workouts">
+      <ion-label>
+        <h2>{{ workout.name }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

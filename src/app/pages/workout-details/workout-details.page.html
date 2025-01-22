@@ -1,0 +1,14 @@
+<ion-list>
+  <ion-item *ngFor="let exercise of workout.exercises">
+    <ion-label>
+      <h2>{{ exercise.name }}</h2>
+    </ion-label>
+    <ion-button
+      (click)="goToLogExercise(programId, workoutId, exercise.id)"
+      expand="block"
+    >
+      Log Set
+    </ion-button>
+  </ion-item>
+</ion-list>
+
