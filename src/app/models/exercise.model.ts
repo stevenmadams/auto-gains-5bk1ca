@@ -1,8 +1,9 @@
-import { ExerciseSet } from './exercise-set.model';
+import { ExerciseLog } from "./exercise-log";
 
 export interface Exercise {
-  id: string;
-  name: string;
-  sets: ExerciseSet[];
-  oneRM?: number; // store the current 1RM for this exercise
-}
+    id: string;
+    name: string;
+    oneRM?: number; // Optional: Store the calculated 1RM
+    logs?: ExerciseLog[]; // Optional: Store logs of each set
+  }
+  

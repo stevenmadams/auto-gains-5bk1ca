@@ -1,13 +1,23 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>exercise-logging</ion-title>
+    <ion-title>Log Exercise</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">exercise-logging</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <form (ngSubmit)="logSet()">
+    <ion-item>
+      <ion-label position="floating">Weight</ion-label>
+      <ion-input type="number" [(ngModel)]="weight" name="weight" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Reps</ion-label>
+      <ion-input type="number" [(ngModel)]="reps" name="reps" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">RIR</ion-label>
+      <ion-input type="number" [(ngModel)]="rir" name="rir" required></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit">Log Set</ion-button>
+  </form>
 </ion-content>
